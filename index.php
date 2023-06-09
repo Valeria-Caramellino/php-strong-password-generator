@@ -34,14 +34,16 @@ include "./function.php";
     <section class="container">
         <div class="row text-center bg-success text-light">
             <div class="col-12 my-4 ">
+
                 <p class="my-3">La pw generata è: <?php echo generaStringaRandom($lunghezza) ?>  </p>
             </div>
                 
             <div class="col-12 my-4">
                 <form class="my-3" action="index.php" method="GET">
                     <label for="lunghezza">Inserisci un numero in cifra per decidere la lunghezza della tua pw</label>
-                    <input type="text" name="lunghezza" placeholder="numero per lunghezza">
-                    <button type="submit">Invia</button>  
+                    <input type="number" name="lunghezza" placeholder="numero per lunghezza" max="15">
+                    <button type="submit">Invia</button>
+                     
                 </form>
             </div>
         </div>
